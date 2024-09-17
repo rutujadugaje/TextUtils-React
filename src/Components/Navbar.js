@@ -14,11 +14,11 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-Link active mx-2" aria-current="page" to="/">Home</Link>
+              <Link className="nav-Link active mx-2 text-decoration-none" aria-current="page" to="/">Home</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-Link mx-2" to="/about">{props.aboutText}</Link>
+              <Link className="nav-Link mx-2 text-decoration-none" to="/about">{props.aboutText}</Link>
             </li>
         </ul>
 
@@ -32,11 +32,8 @@ export default function Navbar(props) {
   )
 }
 
-
 Navbar.propTypes = {title : PropTypes.string.isRequired,
                     aboutText : PropTypes.string.isRequired}
-
-
 
 Navbar.defaultProps = {title: 'Set title here',
                         aboutText: 'new text'}
